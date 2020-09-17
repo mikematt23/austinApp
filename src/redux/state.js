@@ -26,5 +26,7 @@ export default {
     hours :"Monday-Tuesday: 9am-6pm Wednesday: 9am-1pm Thursday-Sunday:9am-6pm",
     address:"2840 Harris Hill Rd, San Marcos, TX 78666",
     description: "Harris Hill Raceway (H2R) is a family-friendly race track and motorsport club centered between Austin, Houston, and San Antonio Texas"
-  }]
+  }],
+  userName : 'Mike',
+  password : 'test123'
 }

@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 
 
 const Home = (props)=>{
-  console.log(props)
   if(props.loggedIn === false){
     return(
       <Table>

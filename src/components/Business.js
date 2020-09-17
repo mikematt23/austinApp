@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const Business = (props)=>{
   let id = props.match.params.id
-  console.log(props)
   let theBiz = props.businesses.filter((business)=>{
     if(business.id == id){
       return business

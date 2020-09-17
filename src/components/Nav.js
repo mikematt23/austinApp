@@ -2,8 +2,7 @@ import React from 'react'
 import {AppBar, Toolbar} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 
-const Nav = (props)=>{
-  console.log(props)
+const Nav = (props)=>{console.log(props)
   if(props.loggedIn){
     return (
       <AppBar position="static">
