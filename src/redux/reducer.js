@@ -12,6 +12,9 @@ const isLoggedIn = (state = false, action) => {
 const businesses = (state = [],action)=>{
   switch(action.type){
     default: return state
+    case 'ADD_BUSINESS':
+      let businesses = [...state]
+      return [...state,action.value]
   }
 }
  const userName = (state = "")=> state

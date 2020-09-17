@@ -1,0 +1,18 @@
+import {connect} from "react-redux"
+import AddBusiness from '../components/AddBusiness'
+import {addBusiness} from '../redux/actions'
+import Business from "./Business"
+
+const mapStateToProps = (state)=>{
+  return {
+    userName : state.userName,
+    businesses : state.businesses
+  }
+}
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    addBusiness: (business)=> dispatch(addBusiness(business))
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(AddBusiness)

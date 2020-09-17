@@ -1,9 +1,37 @@
 import React from 'react'
+import {Table, TableHead, TableBody, TableRow, TableCell, Button, Container} from "@material-ui/core"
+import {Link} from 'react-router-dom'
 
-
-const LoggedInList = ()=>{
+const LoggedInList = (props)=>{
+  console.log(props)
   return (
-    <div>loggedIn</div>
+    <Container>
+      <div>
+         <h6>Logged In, Hello {props.userName}</h6>
+      </div>
+      <Table>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Description</TableCell>
+          <TableCell>Address</TableCell>
+          <TableCell>Delete</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+          {props.businesses.map((business)=>{
+            return(
+              <TableRow key ={business.id}>
+                <TableCell><Link to = {`/loggedIn/business/${business.id}`}>{business.name}</Link></TableCell>
+                 <TableCell>{business.description}</TableCell>
+                 <TableCell>{business.address}</TableCell>
+                 <TableCell><Button>Delete</Button>  </TableCell>
+              </TableRow>
+            )
+          })}
+      </TableBody>
+    </Table>
+  </Container>   
   )
 }
 

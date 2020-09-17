@@ -4,3 +4,10 @@ export const LoggingIn = ()=>{
     value : true
   }
 }
+
+export const addBusiness= (business)=>{
+   return {
+     type: "ADD_BUSINESS",
+     Value : business
+   }
+}

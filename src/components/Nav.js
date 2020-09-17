@@ -1,18 +1,20 @@
 import React from 'react'
 import {AppBar, Toolbar} from '@material-ui/core'
 import {Link} from 'react-router-dom'
+import Business from '../containers/Business'
 
 const Nav = (props)=>{console.log(props)
+  
   if(props.loggedIn){
     return (
       <AppBar position="static">
       <Toolbar>
       <h3>Austin Race Tracks</h3>
       <div>
-        <Link to= "/">
+        <Link to= "/areLoggedIn">
           <h4>Listings</h4>
         </Link>
-        <Link>
+        <Link to ="/add">
           <h4>Add</h4>
         </Link>
         <Link>

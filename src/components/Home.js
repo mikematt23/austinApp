@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 const Home = (props)=>{
-  if(props.loggedIn === false){
+  console.log(props.businesses.length)
     return(
       <Table>
         <TableHead>
@@ -29,11 +29,7 @@ const Home = (props)=>{
         </TableBody>
       </Table>
     )
-   }else {
-     return(
-       <div>home</div>
-     )
-   }
+   
   }
   
 
