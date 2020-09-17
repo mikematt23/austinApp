@@ -1,11 +1,10 @@
 import {connect} from "react-redux"
-import Home from "../components/Home"
+import Business from "../components/Business"
 
 const mapStateToProps = (state)=>{
   return {
-    loggedIn : state.isLoggedIn,
     businesses : state.businesses
   }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Business)

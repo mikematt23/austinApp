@@ -8,9 +8,9 @@ const Nav = (props)=>{
     return (
       <AppBar position="static">
       <Toolbar>
-      <h3>Austin Small Business</h3>
+      <h3>Austin Race Tracks</h3>
       <div>
-        <Link>
+        <Link to= "/">
           <h4>Listings</h4>
         </Link>
         <Link>
@@ -27,12 +27,12 @@ const Nav = (props)=>{
     return(
       <AppBar position="static">
         <Toolbar>
-          <h3>Austin Small Business</h3>
+          <h3>Austin Race Tracks</h3>
           <div>
-            <Link>
+            <Link to= "/">
               <h4>Listings</h4>
             </Link>
-            <Link>
+            <Link to="/login"> 
               <h4>Login</h4>
             </Link>
          </div>

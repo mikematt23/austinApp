@@ -8,5 +8,10 @@ const isLoggedIn = (state = false, action) => {
     return truth
   }
 }
+const businesses = (state = [],action)=>{
+  switch(action.type){
+    default: return state
+  }
+}
 
-export default combineReducers({isLoggedIn})
+export default combineReducers({isLoggedIn, businesses})
