@@ -2,11 +2,9 @@ import React, {useState} from 'react'
 import {
     Button,
     TextField,
-    Dialog,
-    DialogContent,
-    DialogTitle,
     Container
 } from '@material-ui/core'
+import {Link} from 'react-router-dom'
 
 
 const AddBusiness = (props)=>{
@@ -18,19 +16,23 @@ const AddBusiness = (props)=>{
 
 
     const nameChange= (event)=>{
+        event.preventDefault()
         setName(event.target.value)
     }
     const hourChange = (event)=>{
+        event.preventDefault()
         setHours(event.target.value)
     }
     const addressChange = (event)=>{
+        event.preventDefault()
         setAddress(event.target.value)
     }
     const descriptionChange = (event)=>{
+        event.preventDefault()
         setDescription(event.target.value)
     }
-    const handleSumbit =()=>{
-
+    const handleSumbit =(event)=>{
+        event.preventDefault()
         let business = {
             id: props.businesses.length + 1,
             name : name,
@@ -40,9 +42,10 @@ const AddBusiness = (props)=>{
         }
         console.log(business)
         props.addBusiness(business)
-        console.log(props.businesses)
+        
     }
-    
+    console.log(name,hours,address,description)
+    console.log(props.businesses)
     return(
         <Container>
           <div>
@@ -53,7 +56,7 @@ const AddBusiness = (props)=>{
                <TextField placeholder ="Hours" onChange = {hourChange}></TextField>
                <TextField placeholder ='Address' onChange = {addressChange}></TextField>
                <TextField placeholder ="Description" onChange = {descriptionChange}></TextField>
-               <Button onClick ={handleSumbit}>Submit</Button>
+               <Button onClick ={handleSumbit}><Link to = "/areLoggedIn">Submit</Link></Button>
            </Container>
         </Container>
     )

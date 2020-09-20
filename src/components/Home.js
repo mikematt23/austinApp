@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 
 
 const Home = (props)=>{
-  console.log(props.businesses.length)
     return(
       <Table>
         <TableHead>
@@ -22,7 +21,7 @@ const Home = (props)=>{
                  <TableRow key = {business.id}> 
                    <TableCell><Link to = {`/business/${business.id}`}>{business.name}</Link></TableCell>
                    <TableCell>{business.description}</TableCell>
-                   <TableCell>{business.address}</TableCell>
+                   <TableCell>{business.address.street}</TableCell>
                  </TableRow>
              )
           })}

@@ -19,13 +19,13 @@ const LoggedInList = (props)=>{
         </TableRow>
       </TableHead>
       <TableBody>
-          {props.businesses.map((business)=>{
+          {props.businesses.map((business,idx)=>{
             return(
               <TableRow key ={business.id}>
                 <TableCell><Link to = {`/loggedIn/business/${business.id}`}>{business.name}</Link></TableCell>
                  <TableCell>{business.description}</TableCell>
-                 <TableCell>{business.address}</TableCell>
-                 <TableCell><Button>Delete</Button>  </TableCell>
+                 <TableCell>{business.address.street}</TableCell>
+                 <TableCell><Button onClick = {()=> props.removeBusiness(idx)}>Delete</Button>  </TableCell>
               </TableRow>
             )
           })}

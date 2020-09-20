@@ -19,7 +19,7 @@ const LoggedInBusiness = (props)=>{
         <h1>{theBiz[0].name}</h1>
         <h4>{theBiz[0].description}</h4>
         <h6>{theBiz[0].hours}</h6>
-        <h6>{theBiz[0].address}</h6>
+        <h6>{theBiz[0].address.street}</h6>
       </Paper>
     </Container>
   )

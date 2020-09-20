@@ -1,5 +1,6 @@
 import {connect} from "react-redux"
 import LoggedInList from "../components/LoggInList"
+import {removeBusiness} from "../redux/actions"
 
 
 const mapStateToProps = (state)=>{
@@ -9,5 +10,10 @@ const mapStateToProps = (state)=>{
   }
 }
 
+const mapDispatchToProps = (dispatch)=>{
+  return {
+   removeBusiness: (index)=>dispatch(removeBusiness(index))
+  }
+}
 
-export default connect(mapStateToProps)(LoggedInList)
+export default connect(mapStateToProps,mapDispatchToProps)(LoggedInList)

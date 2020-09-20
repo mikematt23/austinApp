@@ -1,10 +1,15 @@
 import React from 'react'
-import {AppBar, Toolbar} from '@material-ui/core'
+import {AppBar, Toolbar,Button} from '@material-ui/core'
 import {Link} from 'react-router-dom'
-import Business from '../containers/Business'
 
-const Nav = (props)=>{console.log(props)
-  
+
+const Nav = (props)=>{
+
+  const handleLogOut =()=>{
+    document.cookie = "loggedIn=false"
+    props.LoggingOut()
+  }
+  console.log(props)
   if(props.loggedIn){
     return (
       <AppBar position="static">
@@ -17,9 +22,9 @@ const Nav = (props)=>{console.log(props)
         <Link to ="/add">
           <h4>Add</h4>
         </Link>
-        <Link>
-          <h4>Log Out</h4>
-        </Link>
+        <Link to ="/">
+           <Button onClick ={handleLogOut}>Log Out</Button>
+        </Link>   
       </div>
       </Toolbar>
     </AppBar>
