@@ -26,6 +26,7 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 }
 
 const Router = (props)=>{
+  console.log(props)
   return (
     <Switch>
       <Route exact path = '/' component = {Home}/>
