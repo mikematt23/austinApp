@@ -1,5 +1,6 @@
 import {connect} from "react-redux"
 import Nav from "../components/Nav"
+import {LoggingOut} from "../redux/actions"
 
 const mapStateToProps = (state)=>{
   return {
@@ -7,4 +8,10 @@ const mapStateToProps = (state)=>{
   }
 }
 
-export default connect(mapStateToProps)(Nav)
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    LoggingOut : ()=>dispatch(LoggingOut())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)
