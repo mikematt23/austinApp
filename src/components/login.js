@@ -28,7 +28,7 @@ const Login = (props)=>{
   const handleLogIn = (event)=>{
     if(userName === props.userName && userPassword === props.password){
       event.preventDefault()
-      document.cookie = "loggedIn=true;max-age=10*1000)"
+      document.cookie = "loggedIn=true;max-age=120*1000)"
       props.loggingIn()
     }else if(props.isLoggedIn === false){
       setMessage("Invalid Password or UserName")
